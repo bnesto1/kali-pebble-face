@@ -34,6 +34,7 @@ void handle_init(AppContextRef ctx) {
   text_layer_init(&text_day_layer, window.layer.frame);
   text_layer_set_text_color(&text_day_layer, GColorBlack);		// Set the font colour to black
   text_layer_set_background_color(&text_day_layer, GColorClear);	// Make the layer's background transparent
+  text_layer_set_text_alignment(&text_day_layer, GTextAlignmentCenter);	// Centre within the frame
   layer_set_frame(&text_day_layer.layer, GRect(100, 5, 70, 25));	// Layer at 100, 5 with size 70 x 25
   text_layer_set_font(&text_day_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_ROBOTO_CONDENSED_21)));	// Custom font
   layer_add_child(&window.layer, &text_day_layer.layer);
@@ -43,6 +44,7 @@ void handle_init(AppContextRef ctx) {
   text_layer_init(&text_month_layer, window.layer.frame);
   text_layer_set_text_color(&text_month_layer, GColorBlack);		// Set the font colour to black
   text_layer_set_background_color(&text_month_layer, GColorClear);	// Make the layer's background transparent
+  text_layer_set_text_alignment(&text_month_layer, GTextAlignmentCenter);	// Centre within the frame
   layer_set_frame(&text_month_layer.layer, GRect(100, 30, 70, 25));	// Layer at 100, 30 with size 70 x 25
   text_layer_set_font(&text_month_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_ROBOTO_CONDENSED_21)));	// Custom font
   layer_add_child(&window.layer, &text_month_layer.layer);
@@ -52,6 +54,7 @@ void handle_init(AppContextRef ctx) {
   text_layer_init(&text_date_layer, window.layer.frame);
   text_layer_set_text_color(&text_date_layer, GColorBlack);		// Set the font colour to black
   text_layer_set_background_color(&text_date_layer, GColorClear);	// Make the layer's background transparent
+  text_layer_set_text_alignment(&text_date_layer, GTextAlignmentCenter);	// Centre within the frame
   layer_set_frame(&text_date_layer.layer, GRect(100, 55, 70, 25));	// Layer at 100, 55 with size of 70 x 25
   text_layer_set_font(&text_date_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_ROBOTO_BOLD_SUBSET_24)));	// Custom font
   layer_add_child(&window.layer, &text_date_layer.layer);
@@ -108,6 +111,20 @@ void handle_minute_tick(AppContextRef ctx, PebbleTickEvent *t) {
   text_layer_set_text(&text_time_layer, time_text);
 
 }
+
+/*
+char *upcase(char *str)
+{
+    char *s = str;
+
+    while (*s)
+    {
+        *s++ = toupper((int)*s);
+    }
+
+    return str;
+}
+*/
 
 void pbl_main(void *params) {
   PebbleAppHandlers handlers = {
