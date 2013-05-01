@@ -22,49 +22,47 @@ void handle_init(AppContextRef ctx) {
 
   window_init(&window, "Kali Linux");
   window_stack_push(&window, true /* Animated */);
-  window_set_background_color(&window, GColorWhite);	// Set the background to white
+  window_set_background_color(&window, GColorBlack);	// Set the background to black
 
   resource_init_current_app(&APP_RESOURCES);		// Initial our resources
 
-  bmp_init_container(RESOURCE_ID_IMAGE_BACKGROUND, &background_image);	// Assign the background image
+  bmp_init_container(RESOURCE_ID_IMAGE_BACKGROUND_BLK, &background_image);	// Assign the background image
   layer_add_child(&window.layer, &background_image.layer.layer);	// Draw the background
 
   /* Make the layer for the day of the week.
-  Positioned at 100, 5 with size of 70 x 25 */
+  Positioned at 5, 140 with size of 40 x 28 */
   text_layer_init(&text_day_layer, window.layer.frame);
-  text_layer_set_text_color(&text_day_layer, GColorBlack);		// Set the font colour to black
+  text_layer_set_text_color(&text_day_layer, GColorWhite);		// Set the font colour to white
   text_layer_set_background_color(&text_day_layer, GColorClear);	// Make the layer's background transparent
-  text_layer_set_text_alignment(&text_day_layer, GTextAlignmentCenter);	// Centre within the frame
-  layer_set_frame(&text_day_layer.layer, GRect(100, 5, 70, 25));	// Layer at 100, 5 with size 70 x 25
+  layer_set_frame(&text_day_layer.layer, GRect(5, 140, 40, 28));	// Layer at 5, 140 with size 40 x 28
   text_layer_set_font(&text_day_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_ROBOTO_CONDENSED_21)));	// Custom font
   layer_add_child(&window.layer, &text_day_layer.layer);
 
   /* Make the layer for the month.
-  Positioned at 100, 30 with size of 70 x 25 */
+  Positioned at 109-45, 140 with size of 40 x 28 */
   text_layer_init(&text_month_layer, window.layer.frame);
-  text_layer_set_text_color(&text_month_layer, GColorBlack);		// Set the font colour to black
+  text_layer_set_text_color(&text_month_layer, GColorWhite);		// Set the font colour to white
   text_layer_set_background_color(&text_month_layer, GColorClear);	// Make the layer's background transparent
-  text_layer_set_text_alignment(&text_month_layer, GTextAlignmentCenter);	// Centre within the frame
-  layer_set_frame(&text_month_layer.layer, GRect(100, 30, 70, 25));	// Layer at 100, 30 with size 70 x 25
+  layer_set_frame(&text_month_layer.layer, GRect(109-45, 140, 40, 28));	// Layer at 109-45,140 with size 40 x 28
   text_layer_set_font(&text_month_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_ROBOTO_CONDENSED_21)));	// Custom font
   layer_add_child(&window.layer, &text_month_layer.layer);
 
   /* Make the layer for the date.
-  Positioned at 100, 55 with size of 70 x 25 */
+  Positioned at 109, 140 with size of 30 x 28 */
   text_layer_init(&text_date_layer, window.layer.frame);
-  text_layer_set_text_color(&text_date_layer, GColorBlack);		// Set the font colour to black
+  text_layer_set_text_color(&text_date_layer, GColorWhite);		// Set the font colour to white
   text_layer_set_background_color(&text_date_layer, GColorClear);	// Make the layer's background transparent
-  text_layer_set_text_alignment(&text_date_layer, GTextAlignmentCenter);	// Centre within the frame
-  layer_set_frame(&text_date_layer.layer, GRect(100, 55, 70, 25));	// Layer at 100, 55 with size of 70 x 25
-  text_layer_set_font(&text_date_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_ROBOTO_BOLD_SUBSET_24)));	// Custom font
+  layer_set_frame(&text_date_layer.layer, GRect(109, 140, 30, 28));	// Layer at 109, 140 with size of 30 x 28
+  text_layer_set_font(&text_date_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_ROBOTO_CONDENSED_21)));	// Custom font
   layer_add_child(&window.layer, &text_date_layer.layer);
 
   /* Make the time layer.
-  Positioned at 35, 120 with size of 109 x 48 */
+  Positioned at 5, 120 with size of 139 x 48 */
   text_layer_init(&text_time_layer, window.layer.frame);
-  text_layer_set_text_color(&text_time_layer, GColorBlack);		// Set the font colour to black
+  text_layer_set_text_color(&text_time_layer, GColorWhite);		// Set the font colour to white
   text_layer_set_background_color(&text_time_layer, GColorClear);	// Make the layer's background transparent
-  layer_set_frame(&text_time_layer.layer, GRect(35, 120, 144-35, 168-120));	// Layer at 35, 120 with size of 109 x 48
+  text_layer_set_text_alignment(&text_time_layer, GTextAlignmentCenter);	// Centre within the frame
+  layer_set_frame(&text_time_layer.layer, GRect(5, 100, 139, 48));	// Layer at 5, 120 with size of 139 x 48
   text_layer_set_font(&text_time_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_ROBOTO_BOLD_SUBSET_36)));	// Custom font
   layer_add_child(&window.layer, &text_time_layer.layer);
 

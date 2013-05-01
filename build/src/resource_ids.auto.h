@@ -14,11 +14,12 @@ typedef enum {
   RESOURCE_ID_FONT_ROBOTO_BOLD_SUBSET_36,
   RESOURCE_ID_FONT_ROBOTO_BOLD_SUBSET_24,
   RESOURCE_ID_IMAGE_BACKGROUND,
+  RESOURCE_ID_IMAGE_BACKGROUND_BLK,
 
 } ResourceId;
 static const ResBankVersion APP_RESOURCES = {
-  .crc = 1304155438,
-  .timestamp = 1367375259,
+  .crc = 101781034,
+  .timestamp = 1367437644,
   .friendly_version = "VERSION"
 };
 
@@ -27,5 +28,6 @@ static const uint32_t resource_crc_table[] = {
   3636944839,
   2317872225,
   4163964573,
+  842596636,
 };
 

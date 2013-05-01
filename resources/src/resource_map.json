@@ -26,6 +26,13 @@
         "type": "png",
         "defName": "IMAGE_BACKGROUND",
         "file": "images/Kali_Dragon_Pebble_Background.png"
+        },
+
+{
+        "type": "png",
+        "defName": "IMAGE_BACKGROUND_BLK",
+        "file": "images/Kali_Dragon_Pebble_Background_Black.png"
         }
+
  ]
 }
