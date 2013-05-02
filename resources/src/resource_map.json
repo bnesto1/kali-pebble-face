@@ -18,6 +18,20 @@
 {
         "type": "font",
         "characterRegex": "[:0-9]",
+        "defName": "FONT_BORIS_BLACKBLOXX_40",
+        "file": "fonts/BorisBlackBloxx.ttf"
+        },
+
+{
+        "type": "font",
+        "characterRegex": "[:0-9]",
+        "defName": "FONT_BORIS_BLACKBLOXX_44",
+        "file": "fonts/BorisBlackBloxx.ttf"
+        },
+
+{
+        "type": "font",
+        "characterRegex": "[:0-9]",
         "defName": "FONT_ROBOTO_BOLD_SUBSET_24",
         "file": "fonts/Roboto-Bold.ttf"
         },
