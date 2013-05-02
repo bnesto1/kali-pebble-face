@@ -43,7 +43,6 @@ void handle_init(AppContextRef ctx) {
   bmp_init_container(RESOURCE_ID_IMAGE_BACKGROUND_BLK, &background_image);	// Assign the background image
   layer_add_child(&window.layer, &background_image.layer.layer);	// Draw the background
 
-
   // Make the layer for the day of the week.
   text_layer_init(&text_day_layer, window.layer.frame);
   text_layer_set_text_color(&text_day_layer, GColorWhite);		// Set the font colour to white
@@ -51,8 +50,6 @@ void handle_init(AppContextRef ctx) {
   layer_set_frame(&text_day_layer.layer, GRect(12, 87, 40, 28));	// Layer at 5, 140 with size 40 x 28
   text_layer_set_font(&text_day_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_ROBOTO_CONDENSED_21)));	// Custom font
   layer_add_child(&window.layer, &text_day_layer.layer);
-
-
 
   // Make the layer for the month.
   text_layer_init(&text_month_layer, window.layer.frame);
@@ -62,8 +59,6 @@ void handle_init(AppContextRef ctx) {
   text_layer_set_font(&text_month_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_ROBOTO_CONDENSED_21)));	// Custom font
   layer_add_child(&window.layer, &text_month_layer.layer);
 
-
-
   // Make the layer for the date.
   text_layer_init(&text_date_layer, window.layer.frame);
   text_layer_set_text_color(&text_date_layer, GColorWhite);		// Set the font colour to white
@@ -71,8 +66,6 @@ void handle_init(AppContextRef ctx) {
   layer_set_frame(&text_date_layer.layer, GRect(110, 87, 30, 28));	// Layer at 109, 140 with size of 30 x 28
   text_layer_set_font(&text_date_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_ROBOTO_CONDENSED_21)));	// Custom font
   layer_add_child(&window.layer, &text_date_layer.layer);
-
-
 
   // Make the hour layer.
   text_layer_init(&text_hour_layer, window.layer.frame);
