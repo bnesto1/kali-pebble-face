@@ -47,31 +47,31 @@ void handle_init(AppContextRef ctx) {
   text_layer_init(&text_day_layer, window.layer.frame);
   text_layer_set_text_color(&text_day_layer, GColorWhite);		// Set the font colour to white
   text_layer_set_background_color(&text_day_layer, GColorClear);	// Make the layer's background transparent
-  layer_set_frame(&text_day_layer.layer, GRect(12, 87, 40, 28));	// Layer at 5, 140 with size 40 x 28
-  text_layer_set_font(&text_day_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_ROBOTO_CONDENSED_21)));	// Custom font
+  layer_set_frame(&text_day_layer.layer, GRect(12, 87, 35, 28));	// Layer at 12, 87 with size 35 x 28
+  text_layer_set_font(&text_day_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BANGERS_21)));	// Custom font
   layer_add_child(&window.layer, &text_day_layer.layer);
 
   // Make the layer for the month.
   text_layer_init(&text_month_layer, window.layer.frame);
   text_layer_set_text_color(&text_month_layer, GColorWhite);		// Set the font colour to white
   text_layer_set_background_color(&text_month_layer, GColorClear);	// Make the layer's background transparent
-  layer_set_frame(&text_month_layer.layer, GRect(62, 87, 40, 28));	// Layer at 109-45,140 with size 40 x 28
-  text_layer_set_font(&text_month_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_ROBOTO_CONDENSED_21)));	// Custom font
+  layer_set_frame(&text_month_layer.layer, GRect(47, 87, 35, 28));	// Layer at 47,87 with size 35 x 28
+  text_layer_set_font(&text_month_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BANGERS_21)));	// Custom font
   layer_add_child(&window.layer, &text_month_layer.layer);
 
   // Make the layer for the date.
   text_layer_init(&text_date_layer, window.layer.frame);
   text_layer_set_text_color(&text_date_layer, GColorWhite);		// Set the font colour to white
   text_layer_set_background_color(&text_date_layer, GColorClear);	// Make the layer's background transparent
-  layer_set_frame(&text_date_layer.layer, GRect(110, 87, 30, 28));	// Layer at 109, 140 with size of 30 x 28
-  text_layer_set_font(&text_date_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_ROBOTO_CONDENSED_21)));	// Custom font
+  layer_set_frame(&text_date_layer.layer, GRect(82, 87, 30, 28));	// Layer at 82, 87 with size of 30 x 28
+  text_layer_set_font(&text_date_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BANGERS_21)));	// Custom font
   layer_add_child(&window.layer, &text_date_layer.layer);
 
   // Make the hour layer.
   text_layer_init(&text_hour_layer, window.layer.frame);
   text_layer_set_text_color(&text_hour_layer, GColorWhite);		// Set the font colour to white
   text_layer_set_background_color(&text_hour_layer, GColorClear);	// Make the layer's background transparent
-  layer_set_frame(&text_hour_layer.layer, GRect(12, 120, 60, 40));	// Layer at 5, 120 with size of 139 x 48
+  layer_set_frame(&text_hour_layer.layer, GRect(12, 120, 60, 40));	// Layer at 12, 120 with size of 60 x 40
   text_layer_set_font(&text_hour_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BORIS_BLACKBLOXX_40)));	// Custom font
   layer_add_child(&window.layer, &text_hour_layer.layer);
 
@@ -79,7 +79,7 @@ void handle_init(AppContextRef ctx) {
   text_layer_init(&text_minute_layer, window.layer.frame);
   text_layer_set_text_color(&text_minute_layer, GColorWhite);             // Set the font colour to white
   text_layer_set_background_color(&text_minute_layer, GColorClear);       // Make the layer's background transparent
-  layer_set_frame(&text_minute_layer.layer, GRect(82, 120, 60, 40));      // Layer at 5, 120 with size of 139 x 48
+  layer_set_frame(&text_minute_layer.layer, GRect(82, 120, 60, 40));      // Layer at 82, 120 with size of 60 x 40
   text_layer_set_font(&text_minute_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BORIS_BLACKBLOXX_40)));     // Custom font
   layer_add_child(&window.layer, &text_minute_layer.layer);
 
@@ -131,20 +131,6 @@ void handle_minute_tick(AppContextRef ctx, PebbleTickEvent *t) {
   text_layer_set_text(&text_minute_layer, minute_text);
 
 }
-
-/*
-char *upcase(char *str)
-{
-    char *s = str;
-
-    while (*s)
-    {
-        *s++ = toupper((int)*s);
-    }
-
-    return str;
-}
-*/
 
 void pbl_main(void *params) {
   PebbleAppHandlers handlers = {

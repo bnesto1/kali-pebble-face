@@ -349,10 +349,10 @@ DISCARD         0x000014b0        0x4
  .eh_frame      0x000014b0        0x4 /root/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crtend.o
 OUTPUT(/root/pebble-dev/pebble-sdk-release-001/watches/kali-pebble-face/build/pebble-app.elf elf32-littlearm)
 
-.rodata         0x000014b4       0x8c
- .rodata        0x000014b4       0x8c src/kali.c.1.o
+.rodata         0x000014b4       0x7c
+ .rodata        0x000014b4       0x7c src/kali.c.1.o
 
-.rel.dyn        0x00001540        0x0
+.rel.dyn        0x00001530        0x0
  .rel.iplt      0x00000000        0x0 /root/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crti.o
  .rel.got       0x00000000        0x0 /root/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crti.o
 
@@ -383,15 +383,15 @@ OUTPUT(/root/pebble-dev/pebble-sdk-release-001/watches/kali-pebble-face/build/pe
  .comment       0x00000000       0x4f /root/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memset.o)
  .comment       0x00000000       0x4f /root/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crtend.o
 
-.debug_line     0x00000000      0x2bd
+.debug_line     0x00000000      0x2bb
  .debug_line    0x00000000       0x71 /root/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crti.o
- .debug_line    0x00000071      0x1d7 src/kali.c.1.o
- .debug_line    0x00000248       0x75 /root/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crtn.o
+ .debug_line    0x00000071      0x1d5 src/kali.c.1.o
+ .debug_line    0x00000246       0x75 /root/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crtn.o
 
-.debug_info     0x00000000     0x15a2
+.debug_info     0x00000000     0x158a
  .debug_info    0x00000000       0x93 /root/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crti.o
- .debug_info    0x00000093     0x147c src/kali.c.1.o
- .debug_info    0x0000150f       0x93 /root/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crtn.o
+ .debug_info    0x00000093     0x1464 src/kali.c.1.o
+ .debug_info    0x000014f7       0x93 /root/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crtn.o
 
 .debug_abbrev   0x00000000      0x204
  .debug_abbrev  0x00000000       0x12 /root/pebble-dev/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.6.3/thumb2/crti.o
@@ -413,9 +413,9 @@ OUTPUT(/root/pebble-dev/pebble-sdk-release-001/watches/kali-pebble-face/build/pe
 .debug_loc      0x00000000       0xe4
  .debug_loc     0x00000000       0xe4 src/kali.c.1.o
 
-.debug_str      0x00000000      0xe76
- .debug_str     0x00000000      0xe76 src/kali.c.1.o
-                                0xf51 (size before relaxing)
+.debug_str      0x00000000      0xddd
+ .debug_str     0x00000000      0xddd src/kali.c.1.o
+                                0xeb8 (size before relaxing)
 
 .debug_frame    0x00000000       0x90
  .debug_frame   0x00000000       0x90 src/kali.c.1.o
